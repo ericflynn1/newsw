@@ -1,0 +1,21 @@
+body {
+    background-color: skyblue;
+}
+ol {
+    font-size: 1.5em;
+    list-style: none;
+}
+li {
+    border: solid black 1px;
+    margin: 12px;
+    padding: 15px;
+}
+button {
+    padding: 5px;
+    align-items: bottom;
+
+}
+
+#starred {
+    color: purple;
+};

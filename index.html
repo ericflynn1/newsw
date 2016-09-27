@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="NewsTrackerApp">
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body ng-controller="newsController">
+        <h1>News Feed</h1>
+        <div id="navBar">
+            <button ng-click="showCNN()" class="btn" id="CNNbtn">CNN</button>
+        </div>
+
+<!-- Scott helped with this-->
+        <ol>
+        <li class="articles" ng-repeat="element in news">
+            <h2>{{ element.title }}</h2>
+            <p> {{ element.summary}}</p>
+            <h5> {{ element.publisher.name}}
+            <i ng-class="(element.starred) ? 'unhidden' : 'hidden'" class="starred" aria-hidden="true"></i>
+            <button ng-click="starIt(element.id)">Star</button>
+            <button ng-click="hide(element.id)">Hide</button>
+            
+
+            <!--<p>{{ element.starred }}</p>-->
+        </li>
+    </ol>
